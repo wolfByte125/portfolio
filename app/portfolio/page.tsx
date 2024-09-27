@@ -3,7 +3,7 @@ import ProjectCard, { ProjectCardProp } from "./ui/ProjectCard";
 export default function Projects() {
   const projects: ProjectCardProp[] = [
     {
-      title: "On Boarding Guide",
+      title: "On Boarding Demo",
       banner: "Banner",
       technologies: [
         {
@@ -40,13 +40,13 @@ export default function Projects() {
         },
       ],
       description: "Demo description",
-      github_repo_link: "hello",
+      github_repo_link: "",
     },
   ];
 
   return (
-    <div>
-      <p className="page-title">Portfolio</p>
+    <div className="pt-10">
+      <p className="page-title">Portfolio | Personal Projects</p>
       <div className="min-w-full min-h-screen">
         {projects?.map((project, idx) => (
           <ProjectCard key={idx} project={project} />

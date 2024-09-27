@@ -15,11 +15,6 @@ export default function NavBar() {
       href: "/portfolio",
     },
     {
-      title: "Skills",
-      icon: "",
-      href: "/skills",
-    },
-    {
       title: "About Me",
       icon: "",
       href: "/about",
@@ -31,7 +26,7 @@ export default function NavBar() {
     },
   ];
   return (
-    <div className="flex justify-center gap-3 mb-10 neo-morph-dark">
+    <div className="flex justify-center gap-3 neo-morph-dark">
       {links.map((link, idx) => (
         <NavLink key={idx} link={link} />
       ))}
