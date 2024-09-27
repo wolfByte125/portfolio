@@ -14,7 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${montserrat.className} antialiased`}>
+      <body
+        className={`${montserrat.className} antialiased bg-[url(../public/imgs/blob.svg)] bg-no-repeat bg-fixed bg-cover min-h-screen text-white`}
+      >
         <div>
           <NavBar />
         </div>

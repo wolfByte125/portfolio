@@ -15,16 +15,21 @@ export default function NavLink({ link }: { link: NavLinkProp }) {
 
   return (
     <Link
-      key={link.title}
-      href={link.href}
+      key={title}
+      href={href}
+      // className={clsx(
+      //   "flex h-[48px] grow items-end justify-center gap-2 bg-black p-3 text-sm font-medium hover:text-sky-300 md:flex-none md:justify-start md:p-2 md:px-3",
+      //   {
+      //     "border border-black border-b-sky-300": pathname === href,
+      //   }
       className={clsx(
-        "flex h-[48px] grow items-end justify-center gap-2 bg-black p-3 text-sm font-medium hover:text-sky-300 md:flex-none md:justify-start md:p-2 md:px-3",
+        "flex h-fit rounded-md my-3 grow items-end justify-center gap-2 p-3 text-sm font-semibold hover:text-sky-300 md:flex-none md:justify-start md:p-2 md:px-3",
         {
-          "border border-black border-b-sky-300": pathname === link.href,
+          "border border-transparent border-b-sky-300": pathname === href,
         }
       )}
     >
-      <p>{link.title}</p>
+      <p>{title}</p>
     </Link>
   );
 }
