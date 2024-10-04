@@ -46,6 +46,15 @@ body {
     backdrop-filter: blur(10px);
   }
 
+  .neo-morph-dark-faded {
+    /* @apply shadow-2xl align-middle bg-gray-900 border-opacity-10  bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-50; */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    vertical-align: middle;
+    background-color: rgba(17, 24, 38, 0.05);
+    background-clip: padding-box;
+    backdrop-filter: blur(10px);
+  }
+
   .neo-morph-light {
     /* @apply shadow-2xl align-middle bg-gray-900  bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-50; */
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);

@@ -1,5 +1,6 @@
 "use client";
 
+import clsx from "clsx";
 import NavLink, { NavLinkProp } from "./NavLink";
 
 export default function NavBar() {
@@ -26,7 +27,7 @@ export default function NavBar() {
     },
   ];
   return (
-    <div className="flex justify-center gap-3 neo-morph-dark">
+    <div className="flex justify-center gap-3 neo-morph-dark-faded">
       {links.map((link, idx) => (
         <NavLink key={idx} link={link} />
       ))}
