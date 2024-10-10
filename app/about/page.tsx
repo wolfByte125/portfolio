@@ -4,6 +4,7 @@ import Separator from "../ui/Separator";
 import EducationCard, { EducationContent } from "./ui/EducationCard";
 import { FaGraduationCap } from "react-icons/fa";
 import { GrCertificate } from "react-icons/gr";
+import Image from "next/image";
 
 export interface AchievementContent {
   title: string;
@@ -45,6 +46,25 @@ export default function page() {
 
   return (
     <div className="min-h-screen text-center neo-morph-dark-faded">
+      <div className="flex justify-center w-full">
+        {/* INTRODUCTION */}
+        <div className="flex justify-center w-fit my-5 neo-morph-dark-faded border border-opacity-10 border-custom-bg-secondary rounded-3xl">
+          <div className="flex items-center justify-center gap-5 p-5">
+            <Image
+              src="/imgs/Upwork.JPG"
+              alt="Profile Picture"
+              width={100}
+              height={100}
+              className="rounded-full shashow-2xl"
+            />
+            <div className="text-left">
+              <p className="font-semibold">Abel Matheos Getiso</p>
+              <p className="">B.Sc. Computer Science</p>
+              <p className="">Programmer</p>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="neo-morph-dark pt-10 pb-10">
         <p className="page-title">Professional Background</p>
         <div className="flex flex-col items-center">
