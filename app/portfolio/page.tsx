@@ -122,7 +122,7 @@ export default function Projects() {
     // HOME MANAGEMENT
     {
       title: "Home Management",
-      banner: "Banner",
+      banner: "IN PROGRESS...",
       technologies: [
         {
           name: "ReactJS",
