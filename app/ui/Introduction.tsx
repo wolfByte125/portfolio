@@ -112,7 +112,7 @@ export default function Introduction() {
       <div className="min-h-screen pt-10">
         <div className="flex justify-center w-full h-fit">
           <Image
-            src="/imgs/Upwork.JPG"
+            src="/imgs/Upwork.jpg"
             alt="Profile Picture"
             width={250}
             height={250}
@@ -120,10 +120,12 @@ export default function Introduction() {
           />
         </div>
         <p className="font-mono flex justify-center font-medium text-4xl text-center my-5">
-          Hello, World! I&apos;m Abel.
+          Hello, World!
+          <br />
+          I&apos;m Abel.
         </p>
         <div className="flex justify-center">
-          <p className="font-mono w-2/5">
+          <p className="font-mono sm:w-full md:w-2/5">
             A versatile web developer with over 2 years of experience in
             crafting innovative web applications.
           </p>

@@ -12,6 +12,8 @@ import { IoLogoFirebase } from "react-icons/io5";
 import { Tooltip } from "@nextui-org/tooltip";
 import Link from "next/link";
 import Image from "next/image";
+import ProjectDetailModal from "./ui/ProjectDescription";
+import ProjectDescription from "./ui/ProjectDescription";
 
 export default function Projects() {
   const projects: ProjectCardProp[] = [
@@ -94,7 +96,7 @@ export default function Projects() {
         },
       ],
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione incidunt eligendi, nulla provident alias nesciunt amet qui maxime quaerat ullam minima quasi, officiis dolore assumenda cum culpa eveniet? Excepturi voluptates sequi laudantium nisi eveniet cum modi voluptatum, autem vero veritatis libero omnis inventore nam possimus pariatur, magni eius corrupti quae!",
+        "This project was designed and developed with the collaboration of some undergraduate students from Addis Ababa University. Its intention was to provide a central place for students to be able to access information regarding trainings, internships and volunteer opportunities. It gives access to admin users to manage the posting and reporting of the aforementioned listing.",
       github_repo_link: "",
     },
     // CRIME ALERT
@@ -146,19 +148,19 @@ export default function Projects() {
         },
       ],
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione incidunt eligendi, nulla provident alias nesciunt amet qui maxime quaerat ullam minima quasi, officiis dolore assumenda cum culpa eveniet? Excepturi voluptates sequi laudantium nisi eveniet cum modi voluptatum, autem vero veritatis libero omnis inventore nam possimus pariatur, magni eius corrupti quae!",
+        "A platform being built for people to manage their homes. From what you have in your pantry to the bills you pay.",
       github_repo_link: "",
     },
   ];
 
   return (
     <div className="pt-10">
-      <p className="page-title">Portfolio | Personal Projects</p>
+      <p className="page-title">Portfolio</p>
       <div className="min-w-full min-h-screen">
         {/* PROJECT 0 - PORTFOLIO*/}
         <div className="neo-morph-dark rounded-r-3xl w-4/5 h-fit p-5 my-5 mx-auto">
-          <div className="flex w-full">
-            <div className="w-2/5 pr-5 flex items-center justify-center">
+          <div className="md:flex w-full">
+            <div className="md:w-2/5 pr-5 flex items-center justify-center">
               <Image
                 src={projects[0].banner}
                 alt="alt"
@@ -167,7 +169,7 @@ export default function Projects() {
                 className="h-fit w-fit"
               />
             </div>
-            <div className="w-3/5">
+            <div className="sm:w-full md:w-3/5">
               <div className="mb-5 font-semibold">{projects[0].title}</div>
               <div className="flex w-3/5">
                 {projects[0].technologies?.map((tech, idx) => (
@@ -182,14 +184,11 @@ export default function Projects() {
                   </div>
                 ))}
               </div>
-              <div className="mb-5">
-                {projects[0].description.length > 250
-                  ? projects[0].description.substring(0, 250) + "..."
-                  : projects[0].description}
+              <div>
+                <ProjectDescription
+                  projectDescription={projects[0].description}
+                />
               </div>
-              {projects[0].description.length > 250 && (
-                <button className="btn mb-5">Read More</button>
-              )}
               <div className="w-fit">
                 {projects[0].github_repo_link != "" && (
                   <Link href={projects[0].github_repo_link}>
@@ -202,8 +201,8 @@ export default function Projects() {
         </div>
         {/* PROJECT 1 - BLOGGER */}
         <div className="neo-morph-dark rounded-r-3xl w-4/5 h-fit p-5 my-5 mx-auto">
-          <div className="flex w-full">
-            <div className="w-2/5 pr-5 flex items-center justify-center">
+          <div className="md:flex w-full">
+            <div className="md:w-2/5 pr-5 flex items-center justify-center">
               <Image
                 src={projects[1].banner}
                 alt="alt"
@@ -227,14 +226,11 @@ export default function Projects() {
                   </div>
                 ))}
               </div>
-              <div className="mb-5">
-                {projects[1].description.length > 250
-                  ? projects[1].description.substring(0, 250) + "..."
-                  : projects[1].description}
+              <div>
+                <ProjectDescription
+                  projectDescription={projects[1].description}
+                />
               </div>
-              {projects[1].description.length > 250 && (
-                <button className="btn mb-5">Read More</button>
-              )}
               <div className="w-fit">
                 {projects[1].github_repo_link != "" && (
                   <Link href={projects[1].github_repo_link}>
@@ -247,8 +243,8 @@ export default function Projects() {
         </div>
         {/* PROJECT 2 - AAU BLOG POST */}
         <div className="neo-morph-dark rounded-r-3xl w-4/5 h-fit p-5 my-5 mx-auto">
-          <div className="flex w-full">
-            <div className="w-2/5 pr-5 flex items-center justify-center">
+          <div className="md:flex w-full">
+            <div className="md:w-2/5 pr-5 flex items-center justify-center">
               <Image
                 src={projects[2].banner}
                 alt="alt"
@@ -272,14 +268,11 @@ export default function Projects() {
                   </div>
                 ))}
               </div>
-              <div className="mb-5">
-                {projects[2].description.length > 250
-                  ? projects[2].description.substring(0, 250) + "..."
-                  : projects[2].description}
+              <div>
+                <ProjectDescription
+                  projectDescription={projects[2].description}
+                />
               </div>
-              {projects[2].description.length > 250 && (
-                <button className="btn mb-5">Read More</button>
-              )}
               <div className="w-fit">
                 {projects[2].github_repo_link != "" && (
                   <Link href={projects[2].github_repo_link}>
@@ -292,8 +285,8 @@ export default function Projects() {
         </div>
         {/* PROJECT 3 - CRIME ALERT */}
         <div className="neo-morph-dark rounded-r-3xl w-4/5 h-fit p-5 my-5 mx-auto">
-          <div className="flex w-full">
-            <div className="w-2/5 pr-5 flex items-center justify-center">
+          <div className="md:flex w-full">
+            <div className="md:w-2/5 pr-5 flex items-center justify-center">
               <Image
                 src={projects[3].banner}
                 alt="alt"
@@ -317,14 +310,11 @@ export default function Projects() {
                   </div>
                 ))}
               </div>
-              <div className="mb-5">
-                {projects[3].description.length > 250
-                  ? projects[3].description.substring(0, 250) + "..."
-                  : projects[3].description}
+              <div>
+                <ProjectDescription
+                  projectDescription={projects[3].description}
+                />
               </div>
-              {projects[3].description.length > 250 && (
-                <button className="btn mb-5">Read More</button>
-              )}
               <div className="w-fit">
                 {projects[3].github_repo_link != "" && (
                   <Link href={projects[3].github_repo_link}>
@@ -337,9 +327,9 @@ export default function Projects() {
         </div>
         {/* PROJECT 4 - HOME MANAGEMENT */}
         <div className="neo-morph-dark rounded-r-3xl w-4/5 h-fit p-5 my-5 mx-auto">
-          <div className="flex w-full">
-            <div className="w-2/5 pr-5 flex items-center justify-center">
-              BANNER
+          <div className="md:flex w-full">
+            <div className="md:w-2/5 pr-5 flex items-center justify-center">
+              COMING SOON
             </div>
             <div className="w-3/5">
               <div className="mb-5 font-semibold">{projects[4].title}</div>
@@ -356,14 +346,11 @@ export default function Projects() {
                   </div>
                 ))}
               </div>
-              <div className="mb-5">
-                {projects[4].description.length > 250
-                  ? projects[4].description.substring(0, 250) + "..."
-                  : projects[4].description}
+              <div>
+                <ProjectDescription
+                  projectDescription={projects[4].description}
+                />
               </div>
-              {projects[4].description.length > 250 && (
-                <button className="btn mb-5">Read More</button>
-              )}
               <div className="w-fit">
                 {projects[4].github_repo_link != "" && (
                   <Link href={projects[4].github_repo_link}>

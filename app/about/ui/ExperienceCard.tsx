@@ -21,7 +21,7 @@ export default function ExperienceCard({ xp }: { xp: ExperienceContent }) {
     end_date,
   } = xp;
   return (
-    <div className="flex w-2/5 m-2 neo-morph-light p-2 rounded-md">
+    <div className="flex sm:w-4/5 md:w-2/5 m-2 neo-morph-light p-2 rounded-md">
       <div className="flex items-center justify-center w-1/5">{icon}</div>
       <div>
         <p className="my-2">

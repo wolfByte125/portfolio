@@ -55,8 +55,8 @@ export default function Contacts() {
   ];
   return (
     <div className="min-w-full min-h-screen flex justify-center items-center flex-wrap pt-10">
-      <div className="flex w-4/5 neo-morph-dark-faded border border-opacity-10 border-custom-bg-secondary rounded-3xl">
-        <div className="w-2/3">
+      <div className="md:flex pb-5 w-4/5 neo-morph-dark-faded border border-opacity-10 border-custom-bg-secondary rounded-3xl">
+        <div className="md:w-2/3">
           {/* CONTACTS */}
           <p className="page-title">Contacts</p>
           <div>
@@ -77,7 +77,7 @@ export default function Contacts() {
             </div>
           </div>
         </div>
-        <div className="w-1/3">
+        <div className="md:w-1/3">
           {/* SOCIALS */}
           <p className="page-title">Socials</p>
           <div>
@@ -94,7 +94,7 @@ export default function Contacts() {
         </div>
       </div>
       <div className="flex w-4/5 neo-morph-dark text-center rounded-3xl py-6 my-6 border border-opacity-10 border-custom-bg-secondary">
-        <div className="w-3/5">
+        {/* <div className="w-full">
           <p className="page-title">Get in touch</p>
           <div className="flex justify-center w-full">
             <form action="" className="flex flex-col items-center w-4/5 gap-3">
@@ -125,13 +125,10 @@ export default function Contacts() {
               />
             </form>
           </div>
-        </div>
-        <div className="divider divider-horizontal"></div>
-        <div className="flex justify-center items-center w-1/3">
-          <div>
-            Do you have any projects that you&apos;re working on? Hit me up
-          </div>
-        </div>
+        </div> */}
+        <p className="text-3xl w-full font-bold">
+          Don&apos;t Hesitate To Contact Me.
+        </p>
       </div>
     </div>
   );
