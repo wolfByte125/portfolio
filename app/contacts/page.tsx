@@ -31,7 +31,7 @@ export default function Contacts() {
     {
       alt: "Instagram",
       logo: <FaInstagram size="32px" />,
-      link: "https://instagram.com",
+      link: "https://www.instagram.com/abel_matheos_/",
       label: "",
     },
   ];
