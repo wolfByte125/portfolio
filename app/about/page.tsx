@@ -51,7 +51,7 @@ export default function page() {
         <div className="flex justify-center w-fit my-5 neo-morph-dark-faded border border-opacity-10 border-custom-bg-secondary rounded-3xl">
           <div className="flex items-center justify-center gap-5 p-5">
             <Image
-              src="/imgs/Upwork.JPG"
+              src="/imgs/Upwork.jpg"
               alt="Profile Picture"
               width={100}
               height={100}
