@@ -87,7 +87,7 @@ export default function Introduction() {
     },
     {
       logo: <DiPostgresql size="64px" />,
-      name: "Drizzle ORM",
+      name: "PostgreSQL",
     },
     {
       logo: <IoLogoFirebase size="64px" />,
