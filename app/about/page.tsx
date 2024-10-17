@@ -13,10 +13,28 @@ export default function page() {
       company: "Meselal Technologies",
       icon: <HiOutlineOfficeBuilding size="48px" />,
       company_website: "https://meselaltech.com/",
-      role: "Backend Developer and Team Leader",
+      role: "Backend Developer",
       location: "Addis Ababa, Ethiopia",
       start_date: "Aug. 2022",
-      end_date: "Oct. 2023",
+      end_date: "Oct. 2024",
+    },
+    {
+      company: "Meselal Technologies",
+      icon: <HiOutlineOfficeBuilding size="48px" />,
+      company_website: "https://meselaltech.com/",
+      role: "Team Leader",
+      location: "Addis Ababa, Ethiopia",
+      start_date: "Aug. 2023",
+      end_date: "Oct. 2024",
+    },
+    {
+      company: "Unity University",
+      icon: <HiOutlineOfficeBuilding size="48px" />,
+      company_website: "",
+      role: "Lecturer (Graduate Assistant)",
+      location: "Addis Ababa, Ethiopia",
+      start_date: "Dec. 2022",
+      end_date: "Mar. 2023",
     },
   ];
 
@@ -38,8 +56,8 @@ export default function page() {
       type: "Training",
       take_away: "Certification",
       location: "Addis Ababa, Ethiopia",
-      start_date: "Oct. 2018",
-      end_date: "Sept. 2022",
+      start_date: "Aug. 2022",
+      end_date: "Oct. 2022",
     },
     {
       title: "Business Leadership",
@@ -48,8 +66,8 @@ export default function page() {
       type: "Training",
       take_away: "Certification",
       location: "Addis Ababa, Ethiopia",
-      start_date: "Oct. 2018",
-      end_date: "Sept. 2022",
+      start_date: "Oct. 2022",
+      end_date: "Nov. 2022",
     },
   ];
 
