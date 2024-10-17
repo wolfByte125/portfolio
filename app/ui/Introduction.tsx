@@ -137,9 +137,9 @@ export default function Introduction() {
       </div>
       {/* BRIEF DESCRIPTION FROM ABOUT PAGE */}
       {/* SKILLS */}
-      <div className="flex justify-center flex-wrap max-w-screen-lg neo-morph-dark-faded text-center">
+      <div className="flex justify-center flex-wrap w-screen neo-morph-dark-faded text-center">
         <p className="page-title font-mono">Skills</p>
-        <div className="justify-center gap-5">
+        {/*<div className="justify-center gap-5">*/}
           {/* {skills.map((skill, idx) => (
             <div
               key={idx}
@@ -187,7 +187,7 @@ export default function Introduction() {
             ))}
           </Marquee>
         </div>
-      </div>
+      {/*</div>*/}
     </div>
   );
 }
