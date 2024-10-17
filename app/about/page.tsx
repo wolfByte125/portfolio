@@ -5,14 +5,7 @@ import EducationCard, { EducationContent } from "./ui/EducationCard";
 import { FaGraduationCap } from "react-icons/fa";
 import { GrCertificate } from "react-icons/gr";
 import Image from "next/image";
-
-export interface AchievementContent {
-  title: string;
-  type: string;
-  take_away: string;
-  start_date: string;
-  end_date: string;
-}
+import AchievementCard, { AchievementContent } from "./ui/AchievementCard";
 
 export default function page() {
   const experiences: ExperienceContent[] = [
@@ -35,12 +28,48 @@ export default function page() {
       start_date: "Oct. 2018",
       end_date: "Sept. 2022",
     },
+  ];
+
+  const achievements: AchievementContent[] = [
     {
+      title: "Learning Experience Design",
       icon: <GrCertificate size="48px" />,
-      field_of_study: "Learning Experience Design",
-      institution: "LXD",
-      start_date: "Aug. 2022",
-      end_date: "Oct. 2022",
+      institution: "LXD Academy",
+      type: "Training",
+      take_away: "Certification",
+      location: "Addis Ababa, Ethiopia",
+      start_date: "Oct. 2018",
+      end_date: "Sept. 2022",
+    },
+    {
+      title: "Business Leadership",
+      icon: <GrCertificate size="48px" />,
+      institution: "School of Commerce, Addis Ababa University",
+      type: "Training",
+      take_away: "Certification",
+      location: "Addis Ababa, Ethiopia",
+      start_date: "Oct. 2018",
+      end_date: "Sept. 2022",
+    },
+    {
+      title: "Business Leadership",
+      icon: <GrCertificate size="48px" />,
+      institution: "School of Commerce, Addis Ababa University",
+      type: "Training",
+      take_away: "Certification",
+      location: "Addis Ababa, Ethiopia",
+      start_date: "Oct. 2018",
+      end_date: "Sept. 2022",
+    },
+    {
+      title: "Business Leadership",
+      icon: <GrCertificate size="48px" />,
+      institution: "School of Commerce, Addis Ababa University",
+      type: "Training",
+      take_away: "Certification",
+      location: "Addis Ababa, Ethiopia",
+      start_date: "Oct. 2018",
+      end_date: "Sept. 2022",
     },
   ];
 
@@ -110,6 +139,11 @@ export default function page() {
 
       <div className="py-5">
         <p className="page-title">Acheivements</p>
+        <div className="flex flex-wrap justify-center text-left">
+          {achievements.map((achievement, idx) => (
+            <AchievementCard key={idx} achievement={achievement} />
+          ))}
+        </div>
       </div>
     </div>
   );

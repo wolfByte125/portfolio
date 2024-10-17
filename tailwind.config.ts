@@ -18,6 +18,7 @@ const config: Config = {
         "custom-bg-secondary": "#2E6E89",
         "custom-bg-white": "#FFFDF1",
         "custom-bg-red": "#FF1801",
+        "circle-red": "#8c1919",
         "custom-bg-yellow": "#FFB81C",
       },
     },
