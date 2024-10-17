@@ -51,26 +51,6 @@ export default function page() {
       start_date: "Oct. 2018",
       end_date: "Sept. 2022",
     },
-    {
-      title: "Business Leadership",
-      icon: <GrCertificate size="48px" />,
-      institution: "School of Commerce, Addis Ababa University",
-      type: "Training",
-      take_away: "Certification",
-      location: "Addis Ababa, Ethiopia",
-      start_date: "Oct. 2018",
-      end_date: "Sept. 2022",
-    },
-    {
-      title: "Business Leadership",
-      icon: <GrCertificate size="48px" />,
-      institution: "School of Commerce, Addis Ababa University",
-      type: "Training",
-      take_away: "Certification",
-      location: "Addis Ababa, Ethiopia",
-      start_date: "Oct. 2018",
-      end_date: "Sept. 2022",
-    },
   ];
 
   return (
