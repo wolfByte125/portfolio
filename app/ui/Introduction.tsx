@@ -1,3 +1,4 @@
+import Marquee from "@/components/ui/marquee";
 import { Tooltip } from "@nextui-org/tooltip";
 import Image from "next/image";
 import { BiLogoGoLang } from "react-icons/bi";
@@ -106,6 +107,9 @@ export default function Introduction() {
       name: "GoLang",
     },
   ];
+
+  const firstRow = skills.slice(0, skills.length / 2);
+  const secondRow = skills.slice(skills.length / 2);
   return (
     <div className="min-w-full min-h-screen text-center pt-10">
       {/* INTRODUCTION */}
@@ -133,10 +137,10 @@ export default function Introduction() {
       </div>
       {/* BRIEF DESCRIPTION FROM ABOUT PAGE */}
       {/* SKILLS */}
-      <div className="flex justify-center flex-wrap w-full neo-morph-dark-faded text-center min-h-screen px-20 pb-5">
+      <div className="flex justify-center flex-wrap max-w-screen-lg neo-morph-dark-faded text-center">
         <p className="page-title font-mono">Skills</p>
-        <div className="flex justify-center flex-wrap gap-5">
-          {skills.map((skill, idx) => (
+        <div className="justify-center gap-5">
+          {/* {skills.map((skill, idx) => (
             <div
               key={idx}
               className="p-10 neo-morph-dark rounded-md h-fit w-fit text-center border border-opacity-10 border-custom-bg-secondary"
@@ -149,7 +153,39 @@ export default function Introduction() {
                 {skill.logo}
               </Tooltip>
             </div>
-          ))}
+          ))} */}
+          <Marquee pauseOnHover className="[--duration:60s]">
+            {firstRow.map((skill, idx) => (
+              <div
+                key={idx}
+                className="p-10 neo-morph-dark rounded-md h-fit w-fit text-center border border-opacity-10 border-custom-bg-secondary"
+              >
+                <Tooltip
+                  key={skill?.name}
+                  content={skill?.name ?? ""}
+                  className="font-mono text-xs"
+                >
+                  {skill.logo}
+                </Tooltip>
+              </div>
+            ))}
+          </Marquee>
+          <Marquee reverse pauseOnHover className="[--duration:60s]">
+            {secondRow.map((skill, idx) => (
+              <div
+                key={idx}
+                className="p-10 neo-morph-dark rounded-md h-fit w-fit text-center border border-opacity-10 border-custom-bg-secondary"
+              >
+                <Tooltip
+                  key={skill?.name}
+                  content={skill?.name ?? ""}
+                  className="font-mono text-xs"
+                >
+                  {skill.logo}
+                </Tooltip>
+              </div>
+            ))}
+          </Marquee>
         </div>
       </div>
     </div>
