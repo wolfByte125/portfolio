@@ -37,7 +37,8 @@ export default function Projects() {
       ],
       description:
         "This project is the one you're currently browsing through. I built this portfolio project so that it is more accessible and attractive to potential partners, employers and anyone interested in collaboration.",
-      github_repo_link: "asdf",
+      github_repo_link: "",
+      // "https://github.com/wolfByte125/portfolio",
     },
     // BLOGGER
     {
@@ -67,7 +68,7 @@ export default function Projects() {
       ],
       description:
         "blogger is a simple blog post web app with the core CRUD functionalities for any major project. It was developed for the purpose of onboarding new recruits, interns and employees, for my previous employer (Meselal Technologies). The major target was to introduce our recruits to the tech stack we used (ReactJS, RTK Query, ASP .NET Core) for our products without complicating the system design.",
-      github_repo_link: "asdf",
+      github_repo_link: "https://github.com/wolfByte125/Onboarding",
     },
     // AAU BLOG POST
     {
@@ -97,7 +98,8 @@ export default function Projects() {
       ],
       description:
         "This project was designed and developed with the collaboration of some undergraduate students from Addis Ababa University. Its intention was to provide a central place for students to be able to access information regarding trainings, internships and volunteer opportunities. It gives access to admin users to manage the posting and reporting of the aforementioned listing.",
-      github_repo_link: "",
+      github_repo_link:
+        "https://github.com/wolfByte125/TemplateBackend/tree/aau-post-mod",
     },
     // CRIME ALERT
     {
@@ -160,7 +162,7 @@ export default function Projects() {
         {/* PROJECT 0 - PORTFOLIO*/}
         <div className="neo-morph-dark rounded-r-3xl w-4/5 h-fit p-5 my-5 mx-auto">
           <div className="md:flex w-full">
-            <div className="md:w-2/5 pr-5 flex items-center justify-center">
+            <div className="md:w-2/5 md:pr-5 flex items-center justify-center">
               <Image
                 src={projects[0].banner}
                 alt="alt"
@@ -202,7 +204,7 @@ export default function Projects() {
         {/* PROJECT 1 - BLOGGER */}
         <div className="neo-morph-dark rounded-r-3xl w-4/5 h-fit p-5 my-5 mx-auto">
           <div className="md:flex w-full">
-            <div className="md:w-2/5 pr-5 flex items-center justify-center">
+            <div className="md:w-2/5 md:md:pr-5 flex items-center justify-center">
               <Image
                 src={projects[1].banner}
                 alt="alt"
@@ -211,7 +213,7 @@ export default function Projects() {
                 className="h-fit w-fit"
               />
             </div>
-            <div className="w-3/5">
+            <div className="sm:w-full md:w-3/5">
               <div className="mb-5 font-semibold">{projects[1].title}</div>
               <div className="flex w-3/5">
                 {projects[1].technologies?.map((tech, idx) => (
@@ -244,7 +246,7 @@ export default function Projects() {
         {/* PROJECT 2 - AAU BLOG POST */}
         <div className="neo-morph-dark rounded-r-3xl w-4/5 h-fit p-5 my-5 mx-auto">
           <div className="md:flex w-full">
-            <div className="md:w-2/5 pr-5 flex items-center justify-center">
+            <div className="md:w-2/5 md:pr-5 flex items-center justify-center">
               <Image
                 src={projects[2].banner}
                 alt="alt"
@@ -253,7 +255,7 @@ export default function Projects() {
                 className="h-fit w-fit"
               />
             </div>
-            <div className="w-3/5">
+            <div className="sm:w-full md:w-3/5">
               <div className="mb-5 font-semibold">{projects[2].title}</div>
               <div className="flex w-3/5">
                 {projects[2].technologies?.map((tech, idx) => (
@@ -286,7 +288,7 @@ export default function Projects() {
         {/* PROJECT 3 - CRIME ALERT */}
         <div className="neo-morph-dark rounded-r-3xl w-4/5 h-fit p-5 my-5 mx-auto">
           <div className="md:flex w-full">
-            <div className="md:w-2/5 pr-5 flex items-center justify-center">
+            <div className="md:w-2/5 md:pr-5 flex items-center justify-center">
               <Image
                 src={projects[3].banner}
                 alt="alt"
@@ -295,7 +297,7 @@ export default function Projects() {
                 className="h-fit w-fit"
               />
             </div>
-            <div className="w-3/5">
+            <div className="sm:w-full md:w-3/5">
               <div className="mb-5 font-semibold">{projects[3].title}</div>
               <div className="flex w-3/5">
                 {projects[3].technologies?.map((tech, idx) => (
@@ -328,10 +330,10 @@ export default function Projects() {
         {/* PROJECT 4 - HOME MANAGEMENT */}
         <div className="neo-morph-dark rounded-r-3xl w-4/5 h-fit p-5 my-5 mx-auto">
           <div className="md:flex w-full">
-            <div className="md:w-2/5 pr-5 flex items-center justify-center">
+            <div className="md:w-2/5 md:pr-5 flex items-center justify-center">
               COMING SOON
             </div>
-            <div className="w-3/5">
+            <div className="sm:w-full md:w-3/5">
               <div className="mb-5 font-semibold">{projects[4].title}</div>
               <div className="flex w-3/5">
                 {projects[4].technologies?.map((tech, idx) => (
