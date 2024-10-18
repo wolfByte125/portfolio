@@ -54,7 +54,7 @@ export default function Contacts() {
     },
   ];
   return (
-    <div className="min-w-full min-h-screen flex justify-center items-center flex-wrap pt-10">
+    <div className="w-full min-h-screen flex flex-col items-center py-10 gap-5">
       <div className="md:flex pb-5 w-4/5 neo-morph-dark-faded border border-opacity-10 border-custom-bg-secondary rounded-3xl">
         <div className="md:w-2/3">
           {/* CONTACTS */}
@@ -93,9 +93,10 @@ export default function Contacts() {
           </div>
         </div>
       </div>
-      <div className="flex w-4/5 neo-morph-dark text-center rounded-3xl py-6 my-6 border border-opacity-10 border-custom-bg-secondary">
+      <div className="flex w-4/5 neo-morph-dark text-center rounded-3xl py-6 border border-opacity-10 border-custom-bg-secondary">
         <div className="w-full">
-          <p className="page-title">Get in touch</p>
+          <p className="page-title">Don&apos;t Hesitate To Contact Me.</p>
+          {/* <p className="page-title">Get in touch</p>
           <div className="flex justify-center w-full">
             <form action="" className="flex flex-col items-center w-4/5 gap-3">
               <input
@@ -124,11 +125,8 @@ export default function Contacts() {
                 value="Send"
               />
             </form>
-          </div>
+          </div> */}
         </div>
-        {/* <p className="text-3xl w-full font-bold">
-          Don&apos;t Hesitate To Contact Me.
-        </p> */}
       </div>
     </div>
   );
