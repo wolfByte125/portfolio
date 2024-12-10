@@ -1,6 +1,5 @@
-import Marquee from "@/components/ui/marquee";
-import { Tooltip } from "@nextui-org/tooltip";
 import Image from "next/image";
+import Link from "next/link";
 import { BiLogoGoLang } from "react-icons/bi";
 import { DiPostgresql } from "react-icons/di";
 import { FaGitAlt, FaReact } from "react-icons/fa";
@@ -136,11 +135,43 @@ export default function Introduction() {
         </div>
       </div>
       {/* BRIEF DESCRIPTION FROM ABOUT PAGE */}
+      <div className="neo-morph-dark-faded pt-10 pb-10 flex">
+        <div className="w-1/3 flex items-center justify-center">
+          <p className="text-4xl">About Me</p>
+        </div>
+        <div className="divider divider-horizontal"></div>
+        <div className="w-2/3">
+          <div className="flex flex-col items-center">
+            <p className="sm:w-3/5 md:w-2/3 font-medium text-left">
+              I&apos;m a full-stack (backend-leaning) web developer with over 2
+              years of experience in crafting innovative web applications. My
+              expertise spans various domains, including but not limited to ERP
+              systems.
+              <p className="my-5"></p>
+              I&apos;ve successfully managed projects, ensuring efficient
+              workflows and meeting project deadlines. I&apos;ve also played a
+              crucial role in on-boarding new team members, providing them with
+              the necessary training and support. I&apos;m passionate about
+              collaboration and mentoring.
+              <p className="my-5"></p>
+              I&apos;m driven by a desire to continuously learn and grow as a
+              developer. I&apos;m excited to leverage my skills and experience
+              to contribute to innovative projects and collaborate with talented
+              professionals.
+            </p>
+          </div>
+          <div>
+            <Link href="/about" className="btn btn-primary my-5">
+              <p>More Details</p>
+            </Link>
+          </div>
+        </div>
+      </div>
       {/* SKILLS */}
       <div className="flex justify-center flex-wrap w-screen neo-morph-dark-faded text-center">
-        <p className="page-title font-mono">Skills</p>
+        {/* <p className="page-title font-mono">Skills</p> */}
         {/*<div className="justify-center gap-5">*/}
-          {/* {skills.map((skill, idx) => (
+        {/* {skills.map((skill, idx) => (
             <div
               key={idx}
               className="p-10 neo-morph-dark rounded-md h-fit w-fit text-center border border-opacity-10 border-custom-bg-secondary"
@@ -154,7 +185,7 @@ export default function Introduction() {
               </Tooltip>
             </div>
           ))} */}
-          <Marquee pauseOnHover className="[--duration:60s]">
+        {/* <Marquee pauseOnHover className="[--duration:60s]">
             {firstRow.map((skill, idx) => (
               <div
                 key={idx}
@@ -185,8 +216,8 @@ export default function Introduction() {
                 </Tooltip>
               </div>
             ))}
-          </Marquee>
-        </div>
+          </Marquee> */}
+      </div>
       {/*</div>*/}
     </div>
   );

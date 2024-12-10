@@ -1,13 +1,121 @@
 import { HiOutlineOfficeBuilding } from "react-icons/hi";
 import ExperienceCard, { ExperienceContent } from "./ui/ExperienceCard";
+import Marquee from "@/components/ui/marquee";
 import Separator from "../ui/Separator";
 import EducationCard, { EducationContent } from "./ui/EducationCard";
 import { FaGraduationCap } from "react-icons/fa";
 import { GrCertificate } from "react-icons/gr";
 import Image from "next/image";
 import AchievementCard, { AchievementContent } from "./ui/AchievementCard";
+import { Tooltip } from "@nextui-org/tooltip";
+import { BiLogoGoLang } from "react-icons/bi";
+import { DiPostgresql } from "react-icons/di";
+import { FaGitAlt, FaReact } from "react-icons/fa";
+import { IoLogoCss3 } from "react-icons/io";
+import { IoLogoFirebase } from "react-icons/io5";
+import { RiNextjsFill } from "react-icons/ri";
+import {
+  SiCsharp,
+  SiDaisyui,
+  SiDotnet,
+  SiDrizzle,
+  SiJavascript,
+  SiMicrosoftsqlserver,
+  SiMongodb,
+  SiMui,
+  SiMysql,
+  SiTailwindcss,
+  SiTypescript,
+  SiVitest,
+} from "react-icons/si";
 
+export interface SkillData {
+  logo: React.ReactNode;
+  name: string;
+}
 export default function page() {
+  const skills: SkillData[] = [
+    {
+      logo: <SiDotnet size="64px" />,
+      name: "ASP .NET Core",
+    },
+    {
+      logo: <FaGitAlt size="64px" />,
+      name: "Git",
+    },
+    {
+      logo: <SiDaisyui size="64px" />,
+      name: "DaisyUI",
+    },
+    {
+      logo: <SiTailwindcss size="64px" />,
+      name: "Tailwind CSS",
+    },
+    {
+      logo: <FaReact size="64px" />,
+      name: "ReactJS",
+    },
+    {
+      logo: <SiMicrosoftsqlserver size="64px" />,
+      name: "Microsoft SQL Server",
+    },
+    {
+      logo: <SiMongodb size="64px" />,
+      name: "MongoDB",
+    },
+    {
+      logo: <SiTypescript size="64px" />,
+      name: "TypeScript",
+    },
+    {
+      logo: <SiMui size="64px" />,
+      name: "Material UI",
+    },
+
+    {
+      logo: <RiNextjsFill size="64px" />,
+      name: "Next.js",
+    },
+    {
+      logo: <IoLogoCss3 size="64px" />,
+      name: "CSS3",
+    },
+    {
+      logo: <SiJavascript size="64px" />,
+      name: "JavaScript",
+    },
+    {
+      logo: <SiVitest size="64px" />,
+      name: "Vitest",
+    },
+    {
+      logo: <SiDrizzle size="64px" />,
+      name: "Drizzle ORM",
+    },
+    {
+      logo: <DiPostgresql size="64px" />,
+      name: "PostgreSQL",
+    },
+    {
+      logo: <IoLogoFirebase size="64px" />,
+      name: "Firebase",
+    },
+    {
+      logo: <SiCsharp size="64px" />,
+      name: "C#",
+    },
+    {
+      logo: <SiMysql size="64px" />,
+      name: "MySQL",
+    },
+    {
+      logo: <BiLogoGoLang size="64px" />,
+      name: "GoLang",
+    },
+  ];
+
+  const firstRow = skills.slice(0, skills.length / 2);
+  const secondRow = skills.slice(skills.length / 2);
   const experiences: ExperienceContent[] = [
     {
       company: "Meselal Technologies",
@@ -142,6 +250,42 @@ export default function page() {
             <AchievementCard key={idx} achievement={achievement} />
           ))}
         </div>
+      </div>
+
+      {/* SKILLS */}
+      <div className="flex justify-center flex-wrap w-screen neo-morph-dark-faded text-center">
+        <Marquee pauseOnHover className="[--duration:60s]">
+          {firstRow.map((skill, idx) => (
+            <div
+              key={idx}
+              className="p-10 neo-morph-dark rounded-md h-fit w-fit text-center border border-opacity-10 border-custom-bg-secondary"
+            >
+              <Tooltip
+                key={skill?.name}
+                content={skill?.name ?? ""}
+                className="font-mono text-xs"
+              >
+                {skill.logo}
+              </Tooltip>
+            </div>
+          ))}
+        </Marquee>
+        <Marquee reverse pauseOnHover className="[--duration:60s]">
+          {secondRow.map((skill, idx) => (
+            <div
+              key={idx}
+              className="p-10 neo-morph-dark rounded-md h-fit w-fit text-center border border-opacity-10 border-custom-bg-secondary"
+            >
+              <Tooltip
+                key={skill?.name}
+                content={skill?.name ?? ""}
+                className="font-mono text-xs"
+              >
+                {skill.logo}
+              </Tooltip>
+            </div>
+          ))}
+        </Marquee>
       </div>
     </div>
   );
