@@ -254,6 +254,8 @@ export default function page() {
 
       {/* SKILLS */}
       <div className="flex justify-center flex-wrap w-screen neo-morph-dark-faded text-center">
+        <p className="page-title font-mono">Skills</p>
+
         <Marquee pauseOnHover className="[--duration:60s]">
           {firstRow.map((skill, idx) => (
             <div
