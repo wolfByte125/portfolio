@@ -203,7 +203,7 @@ export default function page() {
       <div className="neo-morph-dark pt-10 pb-10">
         <p className="page-title">Professional Background</p>
         <div className="flex flex-col items-center">
-          <p className="sm:w-3/5 md:w-2/3 font-medium">
+          <p className="sm:w-3/5 md:w-2/3 font-semibold">
             I&apos;m a versatile web developer with over 2 years of experience
             in crafting innovative web applications. My expertise spans various
             domains, including but not limited to ERP systems, where I&apos;ve
